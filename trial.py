@@ -8,7 +8,10 @@
 
 
 from tkinter import *
+
+from turtle import onclick
 from turtle import color
+
 from MyMath import *
 from tkinter import ttk
 from tkinter import messagebox
@@ -19,6 +22,11 @@ root.title('MyMath')
 root.geometry("500x500")
 
 # defining area function
+
+
+def destroyforcircle():
+    height.forget()
+    height_entry.forget()
 
 def area():
 
@@ -42,9 +50,11 @@ def area():
         messagebox.showinfo("Area Triangle", area_triangle)
 
     elif SelectedShape == "Circle":
+        destroyforcircle()
         r = float(radius_entry.get())
         area_circle = myArea(SelectedShape.lower(), 0, 0, 0, r)
         messagebox.showinfo("Area Circle", area_circle)
+        
     else:
         messagebox.showwarning("Invalid Input", "shape is not available")
 
@@ -211,6 +221,10 @@ shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
 
 
+mybutton1 = Button(area_frame, text="Select shape", command=area)
+mybutton1.pack()
+
+
 mybutton1 = Button(area_frame, text="Select shape", command=show1,bg="orange").pack()
 
 
@@ -218,13 +232,20 @@ mybutton1 = Button(area_frame, text="Select shape", command=show1,bg="orange").p
 
 
 
-radius_side = Label(area_frame, text="Enter radius or side in m").pack()
+
+radius_side = Label(area_frame, text="Enter radius or side in m")
+radius_side.pack()
 
 radius_entry = Entry(area_frame, font=("Helvetica", 20),bg="grey")
 radius_entry.pack()
-height = Label(
-area_frame, text="Enter height or width in m if applicable else enter 0").pack()
-height_entry = Entry(area_frame, font=("Helvetica", 20),bg="red")
+
+
+height = Label(area_frame, text="Enter height or width in m if applicable else enter 0")
+height.pack()
+height_entry = Entry(area_frame, font=("Helvetica", 20))
+
+height_entry.pack()
+
 
 height_entry.pack()
 mybutton1.pack()
