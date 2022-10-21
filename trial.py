@@ -137,18 +137,17 @@ def show3():
 # area frame option
 shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
-mybutton1 = Label(area_frame, text="Select shape").pack()
+mybutton1 = Label(area_frame, text="Select shape")
 
 radius_side = Label(area_frame, text="Enter radius or side in m").pack()
 
 radius_entry = Entry(area_frame, font=("Helvetica", 20))
 radius_entry.pack()
-
 height = Label(
-    area_frame, text="Enter height or width in m if applicable else enter 0").pack()
+area_frame, text="Enter height or width in m if applicable else enter 0").pack()
 height_entry = Entry(area_frame, font=("Helvetica", 20))
 height_entry.pack()
-
+mybutton1.pack()
 
 # volume frame option
 volume_options = OptionMenu(
