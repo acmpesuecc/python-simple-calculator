@@ -1,5 +1,5 @@
 from tkinter import messagebox
-
+import math
 # myArea takes 5 arguments and gives us area of 2D shapes
 
 
@@ -60,3 +60,13 @@ def mycondition(condition, a, b, c, angle):
         messagebox.showinfo("Complementary Angle", com1)
         messagebox.showinfo("Supplementary Angle", sup1)
     return comsuplist
+
+def power(a):
+    return math.pow(a)
+
+def factorial(a):
+    return math.factorial(a)
+
+def eRaisedtoPower(a):
+    return math.exp(a)
+
