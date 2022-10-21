@@ -1,4 +1,3 @@
-from math import factorial, log
 from tkinter import messagebox
 
 # myArea takes 5 arguments and gives us area of 2D shapes
@@ -75,9 +74,3 @@ def mysurArea(name, l, b, h, r):
         return(4*3.14*r**2)
     else:
         return(-1)
-
-def mylog(value,base):
-    return(log(value,base))
-
-def myfact(number):
-    return(factorial(number))
