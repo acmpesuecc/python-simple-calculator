@@ -210,7 +210,9 @@ power_side = Label(area_frame, text="Select Shape").pack()
 shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
 
+
 mybutton1 = Button(area_frame, text="Select shape", command=show1,bg="orange").pack()
+
 
 
 
@@ -220,20 +222,19 @@ radius_side = Label(area_frame, text="Enter radius or side in m").pack()
 
 radius_entry = Entry(area_frame, font=("Helvetica", 20),bg="grey")
 radius_entry.pack()
-
 height = Label(
-    area_frame, text="Enter height or width in m if applicable else enter 0").pack()
+area_frame, text="Enter height or width in m if applicable else enter 0").pack()
 height_entry = Entry(area_frame, font=("Helvetica", 20),bg="red")
-height_entry.pack()
 
+height_entry.pack()
+mybutton1.pack()
 
 # volume frame option
 power_side = Label(volume_frame, text="Select Shape").pack()
 volume_options = OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
 
-mybutton2 = Button(volume_frame, text="Select shape", command=show2,bg="yellow").pack()
-
+mybutton2 = Label(volume_frame, text="Select shape").pack()
 
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20),bg="green")
@@ -252,12 +253,7 @@ power_side = Label(condition_frame, text="Select Condition").pack()
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
 
-
-
-
-mybutton3 = Button(condition_frame, bg='cyan', text="Select condition",
-                   command=show3).pack()
-
+mybutton3 = Label(condition_frame, text="Select condition").pack()
 
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20),bg="blue")
