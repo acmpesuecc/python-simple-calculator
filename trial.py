@@ -18,24 +18,24 @@ def area():
     SelectedShape = shapes.get()
 
     if SelectedShape == "Rectangle":
-        l = int(radius_entry.get())
-        b = int(height_entry.get())
+        l = float(radius_entry.get())
+        b = float(height_entry.get())
         area_rectangle = myArea(SelectedShape.lower(), l, b, 0, 0)
         messagebox.showinfo("Area Rectangle", area_rectangle)
 
     elif SelectedShape == "Square":
-        r = int(radius_entry.get())
+        r = float(radius_entry.get())
         area_square = myArea(SelectedShape.lower(), r, 0, 0, 0)
         messagebox.showinfo("Area Square", area_square)
 
     elif SelectedShape == "Triangle":
-        b = int(radius_entry.get())
-        h = int(height_entry.get())
+        b = float(radius_entry.get())
+        h = float(height_entry.get())
         area_triangle = myArea(SelectedShape.lower(), 0, b, h, 0)
         messagebox.showinfo("Area Triangle", area_triangle)
 
     elif SelectedShape == "Circle":
-        r = int(radius_entry.get())
+        r = float(radius_entry.get())
         area_circle = myArea(SelectedShape.lower(), 0, 0, 0, r)
         messagebox.showinfo("Area Circle", area_circle)
     else:
@@ -47,29 +47,29 @@ def area():
 def volume():
     selected_solid_shape = solidshape.get()
     if selected_solid_shape == "Sphere":
-        r = int(radius_entry2.get())
+        r = float(radius_entry2.get())
         vol_sphere = myvolume(selected_solid_shape.lower(), 0, 0, 0, r)
         messagebox.showinfo("Volume Sphere", vol_sphere)
     elif selected_solid_shape == "Cone":
-        r = int(radius_entry2.get())
-        h = int(height2.get())
+        r = float(radius_entry2.get())
+        h = float(height2.get())
         vol_cone = myvolume(selected_solid_shape.lower(), 0, 0, h, r)
         messagebox.showinfo("Volume Cone", vol_cone)
 
     elif selected_solid_shape == "Cube":
-        l = int(radius_entry2.get())
+        l = float(radius_entry2.get())
         vol_cube = myvolume(selected_solid_shape.lower(), l, 0, 0, 0)
         messagebox.showinfo("Volume Cube", vol_cube)
     elif selected_solid_shape == "Cylinder":
-        r = int(radius_entry2.get())
-        h = int(height2.get())
+        r = float(radius_entry2.get())
+        h = float(height2.get())
         vol_cylinder = myvolume(selected_solid_shape.lower(), 0, 0, h, r)
         messagebox.showinfo("Volume Cylinder", vol_cylinder)
 
     elif selected_solid_shape == "Cuboid":
-        l = int(radius_entry2.get())
-        b = int(width_entry.get())
-        h = int(height2.get())
+        l = float(radius_entry2.get())
+        b = float(width_entry.get())
+        h = float(height2.get())
         vol_cuboid = myvolume(selected_solid_shape.lower(), l, b, h, 0)
         messagebox.showinfo("Volume Cuboid", vol_cuboid)
 
@@ -82,9 +82,9 @@ def volume():
 def condition_check():
     tocheck = conditions.get()
     if tocheck == "Pythagorean Triplet Checker":
-        a = int(side1_entry.get())
-        b = int(side2_entry.get())
-        c = int(side3_entry.get())
+        a = float(side1_entry.get())
+        b = float(side2_entry.get())
+        c = float(side3_entry.get())
         py_check = mycondition(tocheck, a, b, c, 0)
         if py_check == 1:
             messagebox.showinfo("Check", "This is a Pythagorean Triplet.")
@@ -92,7 +92,7 @@ def condition_check():
             messagebox.showinfo("Check", "This is not a Pythagorean Triplet.")
 
     elif tocheck == "Complimentary&Supplementary Angles":
-        angle = int(angle_entry.get())
+        angle = float(angle_entry.get())
         comsup = mycondition(tocheck, 0, 0, 0, angle)
 
 
