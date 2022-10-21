@@ -1,9 +1,12 @@
 # importing all the libraries we are making use of (tkinter and custom MyMath module
 
+from ossaudiodev import SNDCTL_SYNTH_REMOVESAMPLE
 from tkinter import *
 from MyMath import *
 from tkinter import ttk
 from tkinter import messagebox
+import PIL
+from PIL import ImageTk, Image
 
 # creating basic root window
 root = Tk()
@@ -11,8 +14,6 @@ root.title('MyMath')
 root.geometry("500x500")
 
 # defining area function
-
-
 def area():
 
     SelectedShape = shapes.get()
@@ -136,7 +137,9 @@ def show3():
 
 # area frame option
 shape_options = OptionMenu(
-    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
+    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle")
+shape_options.config(indicatoron=0 )
+shape_options.pack()
 mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
 
 radius_side = Label(area_frame, text="Enter radius or side in m").pack()
@@ -152,7 +155,9 @@ height_entry.pack()
 
 # volume frame option
 volume_options = OptionMenu(
-    volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
+    volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid")
+volume_options.config(indicatoron=0)
+volume_options.pack()
 mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
@@ -167,8 +172,12 @@ width_entry = Entry(volume_frame, font=("Helvetica", 20))
 width_entry.pack()
 
 # condition frame
+# condition_options = OptionMenu(condition_frame, conditions,
+#                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
 condition_options = OptionMenu(condition_frame, conditions,
-                               "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
+                               "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles")
+condition_options.config(indicatoron=0)
+condition_options.pack()
 mybutton3 = Button(condition_frame, text="Select condition",
                    command=show3).pack()
 side1_label = Label(condition_frame, text="Enter first number").pack()
