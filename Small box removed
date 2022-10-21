@@ -151,7 +151,7 @@ height_entry.pack()
 
 
 # volume frame option
-volume_options = OptionMenu(
+volume_options = ttk.OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
 mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
@@ -167,7 +167,7 @@ width_entry = Entry(volume_frame, font=("Helvetica", 20))
 width_entry.pack()
 
 # condition frame
-condition_options = OptionMenu(condition_frame, conditions,
+condition_options = ttk.OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
 mybutton3 = Button(condition_frame, text="Select condition",
                    command=show3).pack()
