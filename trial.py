@@ -9,6 +9,9 @@ from tkinter import messagebox
 root = Tk()
 root.title('MyMath')
 root.geometry("500x500")
+#background color
+root.configure(bg='blue')
+ 
 
 # defining area function
 
@@ -183,6 +186,7 @@ side3_entry.pack()
 angle_label = Label(condition_frame, text="Enter angle in degrees").pack()
 angle_entry = Entry(condition_frame, font=("Helvetica", 20))
 angle_entry.pack()
+
 
 # button frame
 button_frame1 = Frame(area_frame)
