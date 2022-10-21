@@ -1,3 +1,4 @@
+import math
 from tkinter import messagebox
 
 # myArea takes 5 arguments and gives us area of 2D shapes
@@ -22,11 +23,11 @@ def myArea(name, length, breadth, height, radius):
 def myvolume(name, length, breadth, height, radius):
     name = name.lower()
     if name == "sphere":
-        return(4/3*radius**3)
+        return((4/3)*(3.14)*radius**3)
     elif name == "cube":
         return(length**3)
     elif name == "cone":
-        return(0.33*radius**2*height)
+        return(0.33*3.14*radius**2*height)
     elif name == "cuboid":
         return(length*breadth*height)
     elif name == "cylinder":
@@ -44,7 +45,7 @@ def mycondition(condition, a, b, c, angle):
         if a**2+b**2 == c**2:
             return(1)
         else:
-            return(2)
+            return(0)
     if condition == "Complimentary&Supplementary Angles":
         if angle <= 90:
             com = 90-angle
