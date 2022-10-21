@@ -1,3 +1,4 @@
+from math import factorial, log
 from tkinter import messagebox
 
 # myArea takes 5 arguments and gives us area of 2D shapes
@@ -61,8 +62,30 @@ def mycondition(condition, a, b, c, angle):
         messagebox.showinfo("Supplementary Angle", sup1)
     return comsuplist
 
+
 def pownumber(int,input,number,power,answer):
     number=int(input("enter a number:"))
     power=int(input("enter the number to be raised to:"))
     answer=number**power
     return answer
+
+def mypower(power,base):
+    return(pow(base,power))
+
+def mysurArea(name, l, b, h, r):
+    name = name.lower()
+    if name == "cuboid":
+        return(2*l*b+2*l*h+2*h*b)
+    elif name == "cube":
+        return(6*(l**2))
+    elif name == "sphere":
+        return(4*3.14*r**2)
+    else:
+        return(-1)
+
+def mylog(value,base):
+    return(log(value,base))
+
+def myfact(number):
+    return(factorial(number))
+
