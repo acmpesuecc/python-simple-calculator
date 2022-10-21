@@ -9,6 +9,7 @@ from tkinter import messagebox
 root = Tk()
 root.title('MyMath')
 root.geometry("500x500")
+root.configure(bg="SeaGreen1")
 
 # defining area function
 
@@ -101,9 +102,9 @@ note1 = ttk.Notebook(root)
 note1.pack(pady=5)
 
 # creating 3 frames
-area_frame = Frame(note1, width=300, height=300)
-volume_frame = Frame(note1, width=300, height=300)
-condition_frame = Frame(note1, width=300, height=300)
+area_frame = Frame(note1, width=300, height=300,bg="pale green")
+volume_frame = Frame(note1, width=300, height=300,bg="pale green")
+condition_frame = Frame(note1, width=300, height=300,bg="pale green")
 area_frame.pack(fill="both", expand=1)
 volume_frame.pack(fill="both", expand=1)
 condition_frame.pack(fill="both", expand=1)
@@ -136,68 +137,74 @@ def show3():
 
 # area frame option
 shape_options = OptionMenu(
-    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
-mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
+    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle")
+shape_options.config(bg="pale green")
+shape_options.pack()
+mybutton1 = Button(area_frame, text="Select shape", command=show1,bg="SeaGreen1").pack()
 
-radius_side = Label(area_frame, text="Enter radius or side in m").pack()
+radius_side = Label(area_frame, text="Enter radius or side in m",bg="pale green").pack()
 
-radius_entry = Entry(area_frame, font=("Helvetica", 20))
+radius_entry = Entry(area_frame, font=("Helvetica", 20),bg="pale green")
 radius_entry.pack()
 
 height = Label(
-    area_frame, text="Enter height or width in m if applicable else enter 0").pack()
-height_entry = Entry(area_frame, font=("Helvetica", 20))
+    area_frame, text="Enter height or width in m if applicable else enter 0",bg="pale green").pack()
+height_entry = Entry(area_frame, font=("Helvetica", 20),bg="pale green")
 height_entry.pack()
 
 
 # volume frame option
 volume_options = OptionMenu(
-    volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
-mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
-radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
-radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
+    volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid")
+volume_options.config(bg="pale green")
+volume_options.pack()
+mybutton2 = Button(volume_frame, text="Select shape", command=show2,bg="SeaGreen1").pack()
+radius_side2 = Label(volume_frame, text="Enter radius or side in m",bg="pale green").pack()
+radius_entry2 = Entry(volume_frame, font=("Helvetica", 20),bg="pale green")
 radius_entry2.pack()
 height2 = Label(
-    volume_frame, text="Enter height in m if applicable else enter 0").pack()
-height2 = Entry(volume_frame, font=("Helvetica", 20))
+    volume_frame, text="Enter height in m if applicable else enter 0",bg="pale green").pack()
+height2 = Entry(volume_frame, font=("Helvetica", 20),bg="pale green")
 height2.pack()
 width = Label(
-    volume_frame, text="Enter breadth in m if applicable else enter 0").pack()
-width_entry = Entry(volume_frame, font=("Helvetica", 20))
+    volume_frame, text="Enter breadth in m if applicable else enter 0",bg="pale green").pack()
+width_entry = Entry(volume_frame, font=("Helvetica", 20),bg="pale green")
 width_entry.pack()
 
 # condition frame
 condition_options = OptionMenu(condition_frame, conditions,
-                               "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
+                               "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles")
+condition_options.config(bg="pale green")
+condition_options.pack()
 mybutton3 = Button(condition_frame, text="Select condition",
-                   command=show3).pack()
-side1_label = Label(condition_frame, text="Enter first number").pack()
+                   command=show3,bg="SeaGreen1").pack()
+side1_label = Label(condition_frame, text="Enter first number",bg="pale green").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
-side2_label = Label(condition_frame, text="Enter second number").pack()
+side2_label = Label(condition_frame, text="Enter second number",bg="pale green").pack()
 side2_entry = Entry(condition_frame, font=("Helvetica", 20))
 side2_entry.pack()
-side3_label = Label(condition_frame, text="Enter third number").pack()
+side3_label = Label(condition_frame, text="Enter third number",bg="pale green").pack()
 side3_entry = Entry(condition_frame, font=("Helvetica", 20))
 side3_entry.pack()
-angle_label = Label(condition_frame, text="Enter angle in degrees").pack()
+angle_label = Label(condition_frame, text="Enter angle in degrees",bg="pale green").pack()
 angle_entry = Entry(condition_frame, font=("Helvetica", 20))
 angle_entry.pack()
 
 # button frame
-button_frame1 = Frame(area_frame)
+button_frame1 = Frame(area_frame,bg="pale green")
 button_frame1.pack()
-button_frame2 = Frame(volume_frame)
+button_frame2 = Frame(volume_frame,bg="pale green")
 button_frame2.pack()
-button_frame3 = Frame(condition_frame)
+button_frame3 = Frame(condition_frame,bg="pale green")
 button_frame3.pack()
 
 # creating buttons
-button1 = Button(button_frame1, text="Calculate", command=area)
+button1 = Button(button_frame1, text="Calculate", command=area,bg="SeaGreen2")
 button1.grid(row=0, column=0, padx=10)
-button2 = Button(button_frame2, text="Calculate", command=volume)
+button2 = Button(button_frame2, text="Calculate", command=volume,bg="SeaGreen2")
 button2.grid(row=0, column=0, padx=10)
-button3 = Button(button_frame3, text="Calculate", command=condition_check)
+button3 = Button(button_frame3, text="Calculate", command=condition_check,bg="SeaGreen2")
 button3.grid(row=0, column=0, padx=10)
 
 root.mainloop()
