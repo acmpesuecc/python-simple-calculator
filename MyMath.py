@@ -70,3 +70,9 @@ def factorial(a):
 def eRaisedtoPower(a):
     return math.exp(a)
 
+def fmod(a,b):
+    return math.fmod(a,b)
+
+def sinofanumber(a):
+    return math.sin(a)
+
