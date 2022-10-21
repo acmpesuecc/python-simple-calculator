@@ -60,3 +60,8 @@ def mycondition(condition, a, b, c, angle):
         messagebox.showinfo("Complementary Angle", com1)
         messagebox.showinfo("Supplementary Angle", sup1)
     return comsuplist
+# Mypower returns the power of the number
+def Mypower(num,pow):
+    num=int(input("enter any number"))
+    pow=int(input("enter the power"))
+    return(num**pow)
