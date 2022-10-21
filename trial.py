@@ -9,7 +9,8 @@ from tkinter import messagebox
 root = Tk()
 root.title('MyMath')
 root.geometry("500x500")
-
+#background colour
+root.configure(bg='red')
 # defining area function
 
 
