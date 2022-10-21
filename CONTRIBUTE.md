@@ -6,7 +6,7 @@ Any issue has to have a proper title for their merge request otherwise it will n
 **PR Guidelines**
 You're only allowed to make **one** pr per person to this repository as it's only for learning basic git commands and for beginners.
 Please do not create new files for different functions
-Merge requests have to be properly explained 
+Merge requests have to be properly explained
 
 **Build Instructions**
 - python complier
