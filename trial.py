@@ -76,6 +76,40 @@ def volume():
     else:
         messagebox.showwarning("Invalid input", "shape is not available")
 
+        
+
+
+
+        #######
+def TSA3D():
+    selected_solid_shape = solidshape.get()
+    if selected_solid_shape == "Sphere":
+        r = int(radius_entry2.get())
+        TSA = TSA3D(selected_solid_shape.lower(), 0, 0, 0, r)
+        messagebox.showinfo("TSA Sphere",TSA)
+    elif selected_solid_shape == "Cone":
+        r = int(radius_entry2.get())
+        h = int(height2.get())
+        TSAC = TSA3D(selected_solid_shape.lower(), 0, 0, h, r)
+        messagebox.showinfo("TSA Cone",TSAC)
+
+    elif selected_solid_shape == "Cube":
+        l = int(radius_entry2.get())
+        TSACUBE = TSA3D(selected_solid_shape.lower(), l, 0, 0, 0)
+        messagebox.showinfo("TSA Cube", TSACUBE)
+    
+    elif selected_solid_shape == "Cuboid":
+        l = int(radius_entry2.get())
+        b = int(width_entry.get())
+        h = int(height2.get())
+        TSACUBOID = TSA3D(selected_solid_shape.lower(), l, b, h, 0)
+        messagebox.showinfo("TSA Cuboid",TSACUBOID)
+
+    else:
+        messagebox.showwarning("Invalid input", "shape is not available")
+
+
+
 
 # defining condition_check function
 
@@ -112,6 +146,8 @@ condition_frame.pack(fill="both", expand=1)
 note1.add(area_frame, text="Area Calculator")
 note1.add(volume_frame, text="Volume Calculator")
 note1.add(condition_frame, text="Condition Checker")
+note1.add(condition_frame, text="TSA calculator")
+
 
 # defining shapes and show
 shapes = StringVar()
@@ -137,7 +173,7 @@ def show3():
 # area frame option
 shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
-mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
+#mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
 
 radius_side = Label(area_frame, text="Enter radius or side in m").pack()
 
@@ -153,7 +189,7 @@ height_entry.pack()
 # volume frame option
 volume_options = OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
-mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
+#mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
 radius_entry2.pack()
@@ -169,8 +205,8 @@ width_entry.pack()
 # condition frame
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
-mybutton3 = Button(condition_frame, text="Select condition",
-                   command=show3).pack()
+#mybutton3 = Button(condition_frame, text="Select condition",
+              #     command=show3).pack()
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()

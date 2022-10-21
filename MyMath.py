@@ -34,6 +34,20 @@ def myvolume(name, length, breadth, height, radius):
     else:
         return(-1)
 
+    def TSA3D(name, length, breadth, height, radius):
+        name=name.lower()
+    if name == "sphere":
+        return(4*3.14*radius**2)
+    elif name == "cube":
+        return(6*length**2)
+    elif name == "cone":
+        return(3.14*radius*(radius+lenght))
+    elif name == "cuboid":
+        return(2 * (length * width + length * height + width * height))
+    else:
+        return(-1)
+
+
 # mycondition returns complementary angle for angles <=90 deg, supplementary angle for angles <= 180 deg
 # error is returned in other cases
 # mycondition also checks pythagoras theorem for 3 numbers and tells whether it is a py triplet or not
