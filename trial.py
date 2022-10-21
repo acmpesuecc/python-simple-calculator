@@ -137,7 +137,7 @@ def show3():
 # area frame option
 shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
-mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
+mybutton1 = Button(area_frame, text="Select shape", command=show1,bg="blue",foreground='white').pack()
 
 radius_side = Label(area_frame, text="Enter radius or side in m").pack()
 
@@ -153,7 +153,7 @@ height_entry.pack()
 # volume frame option
 volume_options = OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
-mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
+mybutton2 = Button(volume_frame, text="Select shape", command=show2,bg="blue",foreground='white').pack()
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
 radius_entry2.pack()
@@ -170,7 +170,7 @@ width_entry.pack()
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
 mybutton3 = Button(condition_frame, text="Select condition",
-                   command=show3).pack()
+                   command=show3,bg="blue",foreground='white').pack()
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
@@ -193,11 +193,11 @@ button_frame3 = Frame(condition_frame)
 button_frame3.pack()
 
 # creating buttons
-button1 = Button(button_frame1, text="Calculate", command=area)
+button1 = Button(button_frame1, text="Calculate", command=area,bg="blue",foreground='white')
 button1.grid(row=0, column=0, padx=10)
-button2 = Button(button_frame2, text="Calculate", command=volume)
+button2 = Button(button_frame2, text="Calculate", command=volume,bg="blue",foreground='white')
 button2.grid(row=0, column=0, padx=10)
-button3 = Button(button_frame3, text="Calculate", command=condition_check)
+button3 = Button(button_frame3, text="Calculate", command=condition_check,bg="blue",foreground='white')
 button3.grid(row=0, column=0, padx=10)
 
 root.mainloop()
