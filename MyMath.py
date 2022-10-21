@@ -60,3 +60,32 @@ def mycondition(condition, a, b, c, angle):
         messagebox.showinfo("Complementary Angle", com1)
         messagebox.showinfo("Supplementary Angle", sup1)
     return comsuplist
+
+#this function adds two numbers
+def add(x,y):
+    x=int(input("Enter first number:"))
+    y=int(input("Enter second number:"))
+    return x+y
+#this function subtracts two numbers
+def sub(x,y):
+    x=int(input("Enter first number:"))
+    y=int(input("Enter second number:"))
+    return x-y
+#this function multiplies two numbers
+def multiply(x,y):
+    x=int(input("Enter first number:"))
+    y=int(input("Enter second number:"))
+    return x*y
+#this function divides two numbers
+def divide(x,y):
+    x=int(input("Enter first number:"))
+    y=int(input("Enter second number:"))
+    return x/y
+#this is a power function
+def power(x,y)
+    x=int(input("Enter base:"))
+    y=int(input("Enter power:"))
+    n=1
+    for i in range(1,y+1):
+        n=x*n
+    print("the value of",x,"power",y,"is",n)
