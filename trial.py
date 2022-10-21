@@ -1,7 +1,7 @@
 # importing all the libraries we are making use of (tkinter and custom MyMath module
 
 from tkinter import *
-from MyMath import *
+from mymath import *
 from tkinter import ttk
 from tkinter import messagebox
 
@@ -9,6 +9,7 @@ from tkinter import messagebox
 root = Tk()
 root.title('MyMath')
 root.geometry("500x500")
+root.configure(bg='teal')
 
 # defining area function
 
@@ -101,9 +102,9 @@ note1 = ttk.Notebook(root)
 note1.pack(pady=5)
 
 # creating 3 frames
-area_frame = Frame(note1, width=300, height=300)
-volume_frame = Frame(note1, width=300, height=300)
-condition_frame = Frame(note1, width=300, height=300)
+area_frame = Frame(note1, width=300, height=300, bg= "teal")
+volume_frame = Frame(note1, width=300, height=300, bg= "teal")
+condition_frame = Frame(note1, width=300, height=300, bg= "teal")
 area_frame.pack(fill="both", expand=1)
 volume_frame.pack(fill="both", expand=1)
 condition_frame.pack(fill="both", expand=1)
@@ -136,51 +137,86 @@ def show3():
 
 # area frame option
 shape_options = OptionMenu(
-    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
-mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
+    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle")
+shape_options.config(bg="LIGHT BLUE", fg="BLACK")  
+shape_options.pack() 
+shape_options["menu"].config(bg="PINK")
+shape_options.pack()
 
-radius_side = Label(area_frame, text="Enter radius or side in m").pack()
+mybutton1 = Button(area_frame, text="Select shape", command=show1, fg='black', bg='pink').pack()
+
+radius_side = Label(area_frame, text="Enter radius or side in m")
+radius_side.config(bg= "light blue", fg= "black")
+radius_side.pack()
 
 radius_entry = Entry(area_frame, font=("Helvetica", 20))
 radius_entry.pack()
 
 height = Label(
-    area_frame, text="Enter height or width in m if applicable else enter 0").pack()
+    area_frame, text="Enter height or width in m if applicable else enter 0")
+height.config(bg= "light blue", fg= "black")
+height.pack()
+
 height_entry = Entry(area_frame, font=("Helvetica", 20))
 height_entry.pack()
 
 
 # volume frame option
 volume_options = OptionMenu(
-    volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
-mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
-radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
+    volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid")
+volume_options.config(bg="LIGHT BLUE", fg="BLACK")  
+volume_options.pack() 
+volume_options["menu"].config(bg="PINK")
+volume_options.pack()
+
+mybutton2 = Button(volume_frame, text="Select shape", command=show2, fg='black', bg='pink')
+mybutton2.config(bg= "pink", fg= "black")
+mybutton2.pack()
+radius_side2 = Label(volume_frame, text="Enter radius or side in m")
+radius_side2.config(bg= "light blue", fg= "black")
+radius_side2.pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
 radius_entry2.pack()
 height2 = Label(
-    volume_frame, text="Enter height in m if applicable else enter 0").pack()
+    volume_frame, text="Enter height in m if applicable else enter 0")
+height2.config(bg= "light blue", fg= "black")
+height2.pack()
 height2 = Entry(volume_frame, font=("Helvetica", 20))
 height2.pack()
 width = Label(
-    volume_frame, text="Enter breadth in m if applicable else enter 0").pack()
+    volume_frame, text="Enter breadth in m if applicable else enter 0")
+width.config(bg= "light blue", fg= "black")
+width.pack()
 width_entry = Entry(volume_frame, font=("Helvetica", 20))
 width_entry.pack()
 
 # condition frame
 condition_options = OptionMenu(condition_frame, conditions,
-                               "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
+                               "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles")
+condition_options.config(bg="LIGHT BLUE", fg="BLACK")  
+condition_options.pack() 
+condition_options["menu"].config(bg="PINK")
+condition_options.pack()
 mybutton3 = Button(condition_frame, text="Select condition",
-                   command=show3).pack()
-side1_label = Label(condition_frame, text="Enter first number").pack()
+                   command=show3, fg='black', bg='pink').pack()
+side1_label = Label(condition_frame, text="Enter first number")
+side1_label.config(bg= "light blue", fg= "black")
+side1_label.pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
-side2_label = Label(condition_frame, text="Enter second number").pack()
+side2_label = Label(condition_frame, text="Enter second number")
+side2_label.config(bg= "light blue", fg= "black")
+side2_label.pack()
 side2_entry = Entry(condition_frame, font=("Helvetica", 20))
 side2_entry.pack()
-side3_label = Label(condition_frame, text="Enter third number").pack()
+side3_label = Label(condition_frame, text="Enter third number")
+side3_label.config(bg= "light blue", fg= "black")
+side3_label.pack()
 side3_entry = Entry(condition_frame, font=("Helvetica", 20))
 side3_entry.pack()
-angle_label = Label(condition_frame, text="Enter angle in degrees").pack()
+angle_label = Label(condition_frame, text="Enter angle in degrees")
+angle_label.config(bg= "light blue", fg= "black")
+angle_label.pack()
 angle_entry = Entry(condition_frame, font=("Helvetica", 20))
 angle_entry.pack()
 
@@ -193,11 +229,11 @@ button_frame3 = Frame(condition_frame)
 button_frame3.pack()
 
 # creating buttons
-button1 = Button(button_frame1, text="Calculate", command=area)
+button1 = Button(button_frame1, text="Calculate", command=area, fg='black', bg='pink')
 button1.grid(row=0, column=0, padx=10)
-button2 = Button(button_frame2, text="Calculate", command=volume)
+button2 = Button(button_frame2, text="Calculate", command=volume, fg='black', bg='pink')
 button2.grid(row=0, column=0, padx=10)
-button3 = Button(button_frame3, text="Calculate", command=condition_check)
+button3 = Button(button_frame3, text="Calculate", command=condition_check, fg='black', bg='pink')
 button3.grid(row=0, column=0, padx=10)
 
 root.mainloop()
