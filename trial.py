@@ -102,8 +102,14 @@ note1.pack(pady=5)
 
 # creating 3 frames
 area_frame = Frame(note1, width=300, height=300)
+area_frame.configure(bg='pink')
+
 volume_frame = Frame(note1, width=300, height=300)
+volume_frame.configure(bg='lightblue')
+
 condition_frame = Frame(note1, width=300, height=300)
+condition_frame.configure(bg='lightgreen')
+
 area_frame.pack(fill="both", expand=1)
 volume_frame.pack(fill="both", expand=1)
 condition_frame.pack(fill="both", expand=1)
@@ -137,7 +143,7 @@ def show3():
 # area frame option
 shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
-mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
+mybutton1 = Button(area_frame, text="Select shape", command=show1, fg='red', bg='pink').pack()
 
 radius_side = Label(area_frame, text="Enter radius or side in m").pack()
 
@@ -153,7 +159,9 @@ height_entry.pack()
 # volume frame option
 volume_options = OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
-mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
+mybutton2 = Button(volume_frame, text="Select shape", command=show2, fg='purple', bg='lightblue').pack()
+
+
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
 radius_entry2.pack()
@@ -170,7 +178,7 @@ width_entry.pack()
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
 mybutton3 = Button(condition_frame, text="Select condition",
-                   command=show3).pack()
+                   command=show3, bg='lightgreen', fg='darkgreen').pack()
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
