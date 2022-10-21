@@ -169,18 +169,18 @@ width_entry.pack()
 # condition frame
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
-mybutton3 = Button(condition_frame, text="Select condition",
+mybutton3 = Button(condition_frame, text="Select condition",bg="blue",
                    command=show3).pack()
-side1_label = Label(condition_frame, text="Enter first number").pack()
+side1_label = Label(condition_frame, text="Enter first number",fg="red").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
-side2_label = Label(condition_frame, text="Enter second number").pack()
+side2_label = Label(condition_frame, text="Enter second number",fg="red").pack()
 side2_entry = Entry(condition_frame, font=("Helvetica", 20))
 side2_entry.pack()
-side3_label = Label(condition_frame, text="Enter third number").pack()
+side3_label = Label(condition_frame, text="Enter third number",fg="red").pack()
 side3_entry = Entry(condition_frame, font=("Helvetica", 20))
 side3_entry.pack()
-angle_label = Label(condition_frame, text="Enter angle in degrees").pack()
+angle_label = Label(condition_frame, text="Enter angle in degrees",fg="red").pack()
 angle_entry = Entry(condition_frame, font=("Helvetica", 20))
 angle_entry.pack()
 
@@ -193,11 +193,11 @@ button_frame3 = Frame(condition_frame)
 button_frame3.pack()
 
 # creating buttons
-button1 = Button(button_frame1, text="Calculate", command=area)
+button1 = Button(button_frame1, text="Calculate", command=area,bg="blue")
 button1.grid(row=0, column=0, padx=10)
-button2 = Button(button_frame2, text="Calculate", command=volume)
+button2 = Button(button_frame2, text="Calculate", command=volume,bg="blue")
 button2.grid(row=0, column=0, padx=10)
-button3 = Button(button_frame3, text="Calculate", command=condition_check)
+button3 = Button(button_frame3, text="Calculate",bg="blue", command=condition_check)
 button3.grid(row=0, column=0, padx=10)
 
 root.mainloop()
