@@ -38,6 +38,12 @@ def area():
         r = int(radius_entry.get())
         area_circle = myArea(SelectedShape.lower(), 0, 0, 0, r)
         messagebox.showinfo("Area Circle", area_circle)
+
+    elif SelectedShape == "Trapezium":
+        a = int(radius_entry.get())
+        b = int(height_entry.get())
+        h = int(height_entry.get())
+        area_trapezium = myArea(SelectedShape.lower(),a,b,h,0)    
     else:
         messagebox.showwarning("Invalid Input", "shape is not available")
 
@@ -108,6 +114,7 @@ area_frame.pack(fill="both", expand=1)
 volume_frame.pack(fill="both", expand=1)
 condition_frame.pack(fill="both", expand=1)
 
+
 # adding tabs
 note1.add(area_frame, text="Area Calculator")
 note1.add(volume_frame, text="Volume Calculator")
@@ -136,7 +143,7 @@ def show3():
 
 # area frame option
 shape_options = OptionMenu(
-    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
+    area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle","Trapezium").pack()
 mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
 
 radius_side = Label(area_frame, text="Enter radius or side in m").pack()
@@ -169,8 +176,7 @@ width_entry.pack()
 # condition frame
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
-mybutton3 = Button(condition_frame, text="Select condition",
-                   command=show3).pack()
+side0_label0 = Label(condition_frame, text="Select condition").pack()
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
