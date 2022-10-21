@@ -1,0 +1,10 @@
+global radius
+        valueFrame1 = Frame(root)
+        value = Label(valueFrame1,text="Enter value of radius:")
+        value.grid(row=0,column=0)
+        radius = Entry(valueFrame1)
+        radius.grid(row=0,column=1,pady=5,ipadx=5)
+        valueFrame1.pack(side=TOP,pady=5,padx=5,ipadx=5)
+        result= Button(valueFrame1,text="Get Answer!",bg="green",command=calculation.C_area)
+        result.grid(row=0,column=2)
+        circle.config(state=DISABLED)
