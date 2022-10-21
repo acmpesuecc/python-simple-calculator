@@ -1,4 +1,4 @@
-# importing all the libraries we are making use of (tkinter and custom MyMath module
+# importing all the libraries we are making use of (tkfloater and custom MyMath module
 
 from tkinter import *
 from MyMath import *
@@ -142,7 +142,7 @@ note1 = ttk.Notebook(root)
 note1.pack(pady=5)
 
 # creating 3 frames
-area_frame = Frame(note1, width=300, height=300)
+area_frame = Frame(note1, width=300, height=300 , )
 volume_frame = Frame(note1, width=300, height=300)
 condition_frame = Frame(note1, width=300, height=300)
 power_frame = Frame(note1, width=300, height=300)
@@ -202,6 +202,9 @@ power_side = Label(area_frame, text="Select Shape").pack()
 shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
 
+mybutton1 = Button(area_frame, text="Select shape", command=show1, bg='red').pack()
+
+
 radius_side = Label(area_frame, text="Enter radius or side in m").pack()
 
 radius_entry = Entry(area_frame, font=("Helvetica", 20))
@@ -217,6 +220,10 @@ height_entry.pack()
 power_side = Label(volume_frame, text="Select Shape").pack()
 volume_options = OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
+
+
+mybutton2 = Button(volume_frame, text="Select shape", command=show2 , bg='blue' ).pack()
+
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
 radius_entry2.pack()
@@ -233,6 +240,11 @@ width_entry.pack()
 power_side = Label(condition_frame, text="Select Condition").pack()
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
+
+
+mybutton3 = Button(condition_frame, bg='cyan', text="Select condition",
+                   command=show3).pack()
+
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
@@ -314,11 +326,11 @@ button_frame7 = Frame(fac_frame)
 button_frame7.pack()
 
 # creating buttons
-button1 = Button(button_frame1, text="Calculate", command=area)
+button1 = Button(button_frame1, text="Calculate", command=area , bg='yellow')
 button1.grid(row=0, column=0, padx=10)
-button2 = Button(button_frame2, text="Calculate", command=volume)
+button2 = Button(button_frame2, text="Calculate", command=volume , bg='orange')
 button2.grid(row=0, column=0, padx=10)
-button3 = Button(button_frame3, text="Calculate", command=condition_check)
+button3 = Button(button_frame3, text="Calculate", command=condition_check , bg='pink')
 button3.grid(row=0, column=0, padx=10)
 button4 = Button(button_frame4, text="Calculate", command=power1)
 button4.grid(row=0, column=0, padx=10)
