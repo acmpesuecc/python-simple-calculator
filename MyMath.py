@@ -22,7 +22,7 @@ def myArea(name, length, breadth, height, radius):
 def myvolume(name, length, breadth, height, radius):
     name = name.lower()
     if name == "sphere":
-        return(4/3*radius**3)
+        return((4/3)*3.14*radius**3)
     elif name == "cube":
         return(length**3)
     elif name == "cone":
@@ -60,3 +60,19 @@ def mycondition(condition, a, b, c, angle):
         messagebox.showinfo("Complementary Angle", com1)
         messagebox.showinfo("Supplementary Angle", sup1)
     return comsuplist
+
+#this function gives a power b
+def power(a,b):
+    return(a**b)
+
+#this function divides two numbers
+def divide(x, y):
+    return x / y
+
+#this function adds two numbers
+def add(a,b):
+    return(a+b)
+
+# This function subtracts two numbers
+def subtract(x, y):
+    return x - y
