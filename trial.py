@@ -4,12 +4,12 @@ from tkinter import *
 from MyMath import *
 from tkinter import ttk
 from tkinter import messagebox
-
+from tkinter.ttk import Notebook, Style
 # creating basic root window
 root = Tk()
 root.title('MyMath')
 root.geometry("500x500")
-
+root.configure(bg='#00ABB3')
 # defining area function
 
 
@@ -99,6 +99,13 @@ def condition_check():
 # creating tabs
 note1 = ttk.Notebook(root)
 note1.pack(pady=5)
+s = ttk.Style()
+s.theme_use('default')
+s.configure('TNotebook', background="red")
+
+
+s.map("TNotebook", background= [("selected", "green3")])
+
 
 # creating 3 frames
 area_frame = Frame(note1, width=300, height=300)
