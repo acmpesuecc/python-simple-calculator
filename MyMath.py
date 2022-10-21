@@ -60,3 +60,11 @@ def mycondition(condition, a, b, c, angle):
         messagebox.showinfo("Complementary Angle", com1)
         messagebox.showinfo("Supplementary Angle", sup1)
     return comsuplist
+
+def pownumber(int,input,number,pownum,answer):
+    number=int(input("enter a number:"))
+    pownum=int(input("enter the number to be raised to:"))
+    answer=number**pownum
+    return answer
+
+
