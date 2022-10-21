@@ -12,7 +12,7 @@ root.geometry("500x500")
 
 # defining area function
 
-
+root.configure(bg='blue')
 def area():
 
     SelectedShape = shapes.get()
@@ -102,8 +102,11 @@ note1.pack(pady=5)
 
 # creating 3 frames
 area_frame = Frame(note1, width=300, height=300)
+area_frame.config(bg="black")
 volume_frame = Frame(note1, width=300, height=300)
+volume_frame.config(bg="black")
 condition_frame = Frame(note1, width=300, height=300)
+condition_frame.config(bg="black")
 area_frame.pack(fill="both", expand=1)
 volume_frame.pack(fill="both", expand=1)
 condition_frame.pack(fill="both", expand=1)
@@ -137,15 +140,15 @@ def show3():
 # area frame option
 shape_options = OptionMenu(
     area_frame, shapes, "Circle", "Square", "Triangle", "Rectangle").pack()
-mybutton1 = Button(area_frame, text="Select shape", command=show1).pack()
+mybutton1 = Button(area_frame, text="Select shape",fg="blue",bg="red" ,command=show1).pack()
 
-radius_side = Label(area_frame, text="Enter radius or side in m").pack()
+radius_side = Label(area_frame, text="Enter radius or side in m",fg="blue",bg="green").pack()
 
 radius_entry = Entry(area_frame, font=("Helvetica", 20))
 radius_entry.pack()
 
 height = Label(
-    area_frame, text="Enter height or width in m if applicable else enter 0").pack()
+    area_frame, text="Enter height or width in m if applicable else enter 0",fg="blue",bg="yellow").pack()
 height_entry = Entry(area_frame, font=("Helvetica", 20))
 height_entry.pack()
 
@@ -153,28 +156,28 @@ height_entry.pack()
 # volume frame option
 volume_options = OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
-mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
+mybutton2 = Button(volume_frame, text="Select shape",fg="blue",bg="green", command=show2).pack()
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
 radius_entry2.pack()
 height2 = Label(
-    volume_frame, text="Enter height in m if applicable else enter 0").pack()
+    volume_frame, text="Enter height in m if applicable else enter 0",fg="blue",bg="red").pack()
 height2 = Entry(volume_frame, font=("Helvetica", 20))
 height2.pack()
 width = Label(
-    volume_frame, text="Enter breadth in m if applicable else enter 0").pack()
+    volume_frame, text="Enter breadth in m if applicable else enter 0",fg="white",bg="black").pack()
 width_entry = Entry(volume_frame, font=("Helvetica", 20))
 width_entry.pack()
 
 # condition frame
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
-mybutton3 = Button(condition_frame, text="Select condition",
+mybutton3 = Button(condition_frame, text="Select condition",fg="blue",bg="red",
                    command=show3).pack()
-side1_label = Label(condition_frame, text="Enter first number").pack()
+side1_label = Label(condition_frame, text="Enter first number",fg="black",bg="yellow").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
-side2_label = Label(condition_frame, text="Enter second number").pack()
+side2_label = Label(condition_frame, text="Enter second number",fg="white",bg="green").pack()
 side2_entry = Entry(condition_frame, font=("Helvetica", 20))
 side2_entry.pack()
 side3_label = Label(condition_frame, text="Enter third number").pack()
