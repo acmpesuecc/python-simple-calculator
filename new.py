@@ -117,22 +117,9 @@ note1.add(condition_frame, text="Condition Checker")
 
 # defining shapes and show
 shapes_value = StringVar(area_frame)
-#shapes =  Button(area_frame, text="Select").pack()
 solidshape_value = StringVar(volume_frame)
-#solidshape = Button(volume_frame, text="Select").pack()
 conditions_value = StringVar(condition_frame)
-#conditions =Button(condition_frame, text="Select").pack()
 
-# def show1():
-#     mylabel = Label(area_frame, text=shapes.get()).pack()
-
-
-# def show2():
-#     mylabel2 = Label(volume_frame, text=solidshape.get()).pack()
-#
-#
-# def show3():
-#     mylabel3 = Label(condition_frame, text=conditions.get()).pack()
 
 
 # area frame option
@@ -156,7 +143,6 @@ height_entry.pack()
 volume_options = OptionMenu(
     volume_frame, solidshape_value, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
 solidshape_value.set('Select the object to calculate volume:')
-# mybutton2 = Button(volume_frame, text="Select shape", command=show2).pack()
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20))
 radius_entry2.pack()
@@ -173,8 +159,7 @@ width_entry.pack()
 condition_options = OptionMenu(condition_frame, conditions_value,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
 conditions_value.set('Select Condition:')
-# mybutton3 = Button(condition_frame, text="Select condition",
-#                    command=show3).pack()
+
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20))
 side1_entry.pack()
