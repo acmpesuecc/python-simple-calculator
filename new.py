@@ -1,6 +1,5 @@
 # importing all the libraries we are making use of (tkinter and custom MyMath module
-#ARCHIT ANAND
-#PES2UG21CS088
+
 #THE SMALL BOX BESIDE SELECT REMOVED
 from tkinter import *
 from MyMath import *
@@ -11,6 +10,7 @@ from tkinter import messagebox
 root = Tk()
 root.title('MyMath')
 root.geometry("500x500")
+root.config(background='black')
 
 # defining area function
 
@@ -103,9 +103,9 @@ note1 = ttk.Notebook(root)
 note1.pack(pady=5)
 
 # creating 3 frames
-area_frame = Frame(note1, width=300, height=300)
-volume_frame = Frame(note1, width=300, height=300)
-condition_frame = Frame(note1, width=300, height=300)
+area_frame = Frame(note1, width=300, height=300,background='black')
+volume_frame = Frame(note1, width=300, height=300,background='black')
+condition_frame = Frame(note1, width=300, height=300,background='black')
 area_frame.pack(fill="both", expand=1)
 volume_frame.pack(fill="both", expand=1)
 condition_frame.pack(fill="both", expand=1)
