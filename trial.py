@@ -255,8 +255,6 @@ power_side = Label(volume_frame, text="Select Shape").pack()
 volume_options = OptionMenu(
     volume_frame, solidshape, "Cone", "Sphere", "Cylinder", "Cube", "Cuboid").pack()
 
-mybutton2 = Label(volume_frame, text="Select shape").pack()
-
 radius_side2 = Label(volume_frame, text="Enter radius or side in m").pack()
 radius_entry2 = Entry(volume_frame, font=("Helvetica", 20),bg="green")
 radius_entry2.pack()
