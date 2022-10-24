@@ -8,7 +8,7 @@ from tkinter import messagebox
 
 # creating basic root window
 root = Tk()
-root.title('MyMath')
+root.title('Python-Simple-Calci')
 root.geometry("500x500")
 root.config(background='black')
 
