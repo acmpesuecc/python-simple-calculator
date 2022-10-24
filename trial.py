@@ -248,7 +248,7 @@ height_entry.pack()
 
 
 height_entry.pack()
-mybutton1.pack()
+
 
 # volume frame option
 power_side = Label(volume_frame, text="Select Shape").pack()
