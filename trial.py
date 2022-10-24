@@ -272,8 +272,6 @@ power_side = Label(condition_frame, text="Select Condition").pack()
 condition_options = OptionMenu(condition_frame, conditions,
                                "Pythagorean Triplet Checker", "Complimentary&Supplementary Angles").pack()
 
-mybutton3 = Label(condition_frame, text="Select condition").pack()
-
 side1_label = Label(condition_frame, text="Enter first number").pack()
 side1_entry = Entry(condition_frame, font=("Helvetica", 20),bg="blue")
 side1_entry.pack()
